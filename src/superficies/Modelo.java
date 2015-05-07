@@ -1,7 +1,14 @@
 
 package superficies;
-
+/**
+ * En esta clase es donde crearemos el objeto.
+ * @author ANDY PEÑA SAMPEDRO
+ */
 public class Modelo {
+    /**
+    *Aki es donde ponemos los atributos q usaremos.
+    * */
+    private String shapeType;
      private float squareArea;
     private float sideLength;
     private float sideHeight;
@@ -11,12 +18,29 @@ public class Modelo {
     private float triangleArea;
     private float radius;
     private float circleArea;
-
+/**
+ * Constructor por defecto
+ */
+        
     public Modelo() {
         
     }
 
-    public Modelo(float squareArea, float sideLength, float sideHeight, float rectangleArea, float baseLength, float height, float triangleArea, float radius, float circleArea) {
+ 
+/**
+ * Constructor con parametros.
+ * @param shapeType
+ * @param squareArea
+ * @param sideLength
+ * @param sideHeight
+ * @param rectangleArea
+ * @param baseLength
+ * @param height
+ * @param triangleArea
+ * @param radius
+ * @param circleArea 
+ */
+    public Modelo(String shapeType,float squareArea, float sideLength, float sideHeight, float rectangleArea, float baseLength, float height, float triangleArea, float radius, float circleArea) {
         this.squareArea = squareArea;
         this.sideLength = sideLength;
         this.sideHeight = sideHeight;
@@ -26,6 +50,14 @@ public class Modelo {
         this.triangleArea = triangleArea;
         this.radius = radius;
         this.circleArea = circleArea;
+          this.shapeType = shapeType;
+    }
+       public String getShapeType() {
+        return shapeType;
+    }
+
+    public void setShapeType(String shapeType) {
+        this.shapeType = shapeType;
     }
 
     public float getSquareArea() {
@@ -102,7 +134,7 @@ public class Modelo {
 
     @Override
     public String toString() {
-        return "Modelo{" + "squareArea=" + squareArea + ", sideLength=" + sideLength + ", sideHeight=" + sideHeight + ", rectangleArea=" + rectangleArea + ", baseLength=" + baseLength + ", height=" + height + ", triangleArea=" + triangleArea + ", radius=" + radius + ", circleArea=" + circleArea + '}';
+        return "Modelo{" +"shapeType="+shapeType+ "squareArea=" + squareArea + ", sideLength=" + sideLength + ", sideHeight=" + sideHeight + ", rectangleArea=" + rectangleArea + ", baseLength=" + baseLength + ", height=" + height + ", triangleArea=" + triangleArea + ", radius=" + radius + ", circleArea=" + circleArea + '}';
     }
     
 
