@@ -15,6 +15,8 @@ public class Superficies {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       Modelo mod=new Modelo();
+        Vista vis=new Vista();
         String shapeType;
 
         sc = new Scanner(System.in);
@@ -27,11 +29,15 @@ public class Superficies {
             //add area calculations for square
             float squareArea;
             float sideLength;
+            
+
 
             System.out.println("what is the side length?");
             sideLength = sc.nextFloat();
+            mod.setSideLength(sideLength);
             squareArea = sideLength * sideLength;
-            System.out.println("The area for your square: " + squareArea);
+            mod.setSquareArea(squareArea);
+            vis.vista(mod);
 
         }
         if (shapeType.equals("rectangle")) {
